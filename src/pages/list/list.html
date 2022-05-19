@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cerveja</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+  
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="number.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Preço</ion-label>
+      <ion-input type="text" [(ngModel)]="number.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tipo</ion-label>
+      <ion-input type="text" [(ngModel)]="number.type"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Marca</ion-label>
+      <ion-input type="text" [(ngModel)]="number.mark"></ion-input>
+    </ion-item>
+ 
+    <p>
+      <button color="danger" ion-button full (click)="getPhoto()">
+        <ion-icon name="camera"></ion-icon>
+          Tirar Foto Cerveja</button>
+          <img src="{{number.img}}" alt="" *ngIf="number.img" width="100%" height="150px">
+    </p>
+
+    <p>
+      <button ion-button full (click)="saveNumber(number)">Cadastrar</button>
+    </p>
+
+   
+  
+</ion-item>
+</ion-content>
